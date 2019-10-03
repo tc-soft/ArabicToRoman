@@ -33,21 +33,18 @@ input {
   flex-wrap: nowrap;
   justify-content: center;
 }
-.flex__itemToCenter {
+.flex__item {
+  flex-grow: 1;
   border: 3px solid #fff;
+  background-color: rgb(230, 230, 230);
+  border-radius: 0px;
+}
+.flex__item--toCenter {
   text-align: center;
-  flex-grow: 1;
-  background-color: rgb(230, 230, 230);
 }
-.flex__itemToLeft {
-  border: 3px solid #fff;
+.flex__item--toLeft {
   text-align: left;
-  flex-grow: 1;
-  background-color: rgb(230, 230, 230);
 }
-.flex__itemToRight {
-  border: 3px solid #fff;
+.flex__item--toRight {
   text-align: right;
-  flex-grow: 1;
-  background-color: rgb(230, 230, 230);
 }

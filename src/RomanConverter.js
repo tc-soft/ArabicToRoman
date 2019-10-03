@@ -13,6 +13,7 @@ class RomanConverter extends React.Component {
     if (event.target.value > 0 && event.target.value < 999) {
       this.setState({ roman: arabicToRoman(arabic) });
     } else if (event.target.value <= 0 || event.target.value > 999) {
+      alert("Value is out of range");
       event.target.value = null;
       this.setState({ roman: null });
     }
@@ -21,22 +22,23 @@ class RomanConverter extends React.Component {
   render() {
     return (
       <>
-        <div class="flex">
-          <div class="flex__itemToCenter">
+        <div className="flex">
+          <div className="flex__item flex__item--toCenter">
             <h2>Convert arabic to roman</h2>
             <p>Enter value from 1 to 999</p>
           </div>
         </div>
 
-        <div class="flex">
-          <div class="flex__itemToRight">
+        <div className="flex">
+          <div className="flex__item flex__item--toRight">
             <p>Arabic :</p>
             <p>Roman :</p>
           </div>
-
-          <div class="flex__itemToLeft">
+          <div className="flex__item flex__item--toLeft">
             <input onChange={this.handleChange} type="number" />
-            <p class="output">{this.state.roman ? this.state.roman : null}</p>
+            <p className="output">
+              {this.state.roman ? this.state.roman : null}
+            </p>
           </div>
         </div>
       </>
