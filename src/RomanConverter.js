@@ -31,12 +31,16 @@ class RomanConverter extends React.Component {
 
         <div className="flex">
           <div className="flex__item flex__item--toRight">
-            <p>Arabic :</p>
-            <p>Roman :</p>
+            <p data-testid="labelArabic">Arabic :</p>
+            <p data-testid="labelRoman">Roman :</p>
           </div>
           <div className="flex__item flex__item--toLeft">
-            <input onChange={this.handleChange} type="number" />
-            <p className="output">
+            <input
+              onChange={this.handleChange}
+              type="number"
+              data-testid="inputArabic"
+            />
+            <p className="output" data-testid="outputRoman">
               {this.state.roman ? this.state.roman : null}
             </p>
           </div>
